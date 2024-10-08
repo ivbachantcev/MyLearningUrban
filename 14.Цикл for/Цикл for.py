@@ -3,11 +3,12 @@ primes = []
 not_primes = []
 for x in numbers:
     for i in range(2, int(x**.5) + 1):
+        if x == 1:
+            continue
         if not x % i:
             not_primes.append(x)
             break
     else:
-        if x != 1:
-            primes.append(x)
+        primes.append(x)
 print(f'Primes: {primes}')
 print(f'Not primes: {not_primes}')
