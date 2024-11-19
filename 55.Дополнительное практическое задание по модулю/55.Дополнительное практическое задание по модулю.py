@@ -1,12 +1,12 @@
 import time
 import sys
+
 class UrTube:
     def __init__(self):
         self.users = []
         self.videos = []
         self.current_user = None
     
-
     def log_in(self, nickname, password):
         for user in self.users:
             if user.nickname == nickname and user.password == hash(password):
@@ -57,14 +57,12 @@ class UrTube:
             choice_video.time_now = 0
 
 
-
 class Video:
     def __init__(self, title, duration, time_now=0, adult_mode=False):
         self.title = title
         self.duration = duration
         self.time_now = time_now
         self.adult_mode = adult_mode
-
 
 
 class User:
